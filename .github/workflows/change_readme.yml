@@ -1,0 +1,13 @@
+name: Change README
+on: 
+  workflow_dispatch:
+
+jobs:
+  build:
+    name: (Auto) Hello world action
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Modify README file
+        run: echo -e "text\n" >> README.md
+      - uses: stefanzweifel/git-auto-commit-action@v4
